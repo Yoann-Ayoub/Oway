@@ -29,6 +29,8 @@ export type RootStackParamList = {
   Register: undefined;
   MyTravel:{ isNewUser: boolean, values?:any };
   Date:undefined;
+  Houses:undefined;
+  Activities:undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -39,6 +41,7 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
 export type RootTabParamList = {
   TabOne: undefined;
   TabTwo: undefined;
+  Date: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
