@@ -20,6 +20,8 @@ import Register from '../screens/Register';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import Date from '../screens/Date';
+import Houses from '../screens/Houses';
+import Activities from '../screens/Activities';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -50,6 +52,8 @@ function RootNavigator() {
         <Stack.Screen name="Register" component={Register} options={{ headerShown: true, title:"Inscription"}}/>
         <Stack.Screen name="MyTravel" component={MyTravel} options={{ headerShown: true, title:"Mes Voyages"}} />
         <Stack.Screen name="Date" component={Date} options={{ headerShown: true, title:"Choix des dates"}} />
+        <Stack.Screen name="Houses" component={Houses} options={{ headerShown: true, title:"Choix des dates"}} />
+        <Stack.Screen name="Activities" component={Activities} options={{ headerShown: true, title:"Choix des dates"}} />
       </Stack.Group>
     </Stack.Navigator>
   );

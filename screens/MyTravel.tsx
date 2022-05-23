@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import {FlatList, StyleSheet, TextInput, TouchableOpacity, Image, Button} from 'react-native';
+import {FlatList, StyleSheet, TextInput, TouchableOpacity, Image, Button, ScrollView} from 'react-native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import { Text, View } from '../components/Themed';
 import { Formik } from 'formik';
@@ -54,12 +54,11 @@ export default function LogIn(isNewUser:boolean,) {
   
     useEffect(()=>{
       if(newUser==false){
-        setListTrip([{name:"Voyage Eté", person:3, icon:'calendar'}, {name:"WE entre copains", person:6, icon:"tent"}])
+        setListTrip([{name:"Voyage Eté", person:3, icon:'calendar'}, {name:"WE entre copains", person:6, icon:"tent"}, {name:"Voyage en famille", person:4, icon:"activities"}])
       }
       if(newTripAdded){
         setListTrip([{name:titleTrip, person:numberPerson, icon:"calendar"}])
       }
-      console.log(listTrip)
     },)
 
     const renderTrip=({item})=>{
@@ -67,7 +66,7 @@ export default function LogIn(isNewUser:boolean,) {
       return(
         <View style={styles.buttonView}>
         <TouchableOpacity style={styles.buttonTrip} 
-        onPress={()=>{navigation.navigate("Date")}}>
+        onPress={()=>{navigation.navigate(item.icon=="calendar" ? "Date" : item.icon=="tent" ? "Houses" : "Activities")}}>
           <View style={{backgroundColor:"transparent", flex:4,  justifyContent:"center", marginLeft:5, height:30}}>
           <Text style={styles.textButtonTrip}> {item.name}</Text>
           </View>
@@ -83,7 +82,7 @@ export default function LogIn(isNewUser:boolean,) {
     }
     
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       {newUser==false ?
       <View style={styles.containerBis}>
         <View style={styles.subView}>
@@ -245,7 +244,7 @@ export default function LogIn(isNewUser:boolean,) {
       </View>
       }
       
-  </View>
+  </ScrollView>
   );
 }
 

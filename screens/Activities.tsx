@@ -5,11 +5,11 @@ import { Text, View } from '../components/Themed';
 
 
 
-export default function Date() {
+export default function Activities() {
   const navigation =useNavigation<StackNavigationProp<any>>()
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Dates</Text>
+      <Text style={styles.title}>Activités</Text>
     </View>
   );
 }
