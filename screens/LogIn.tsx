@@ -33,7 +33,7 @@ export default function LogIn(navigation:OwnProps) {
     <View style={styles.container}>
       <Formik
         validationSchema={loginValidationSchema}
-            initialValues={{ email: 'camilledau@gmail.com', password: 'oway123' }}
+            initialValues={{ email: 'yoyo@gmail.com', password: 'oway123' }}
             onSubmit={() => {
             navigation.navigation.navigate("MyTravel", {isNewUser:false})}}
           >
