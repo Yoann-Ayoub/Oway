@@ -74,7 +74,7 @@ export default function LogIn(navigation:OwnProps) {
          style={styles.button}
           onPress={()=>{
             navigation.navigation.navigate("MyTravel", {isNewUser:false})}} >
-          <Text> S'inscrire </Text>
+          <Text style={{color:"white"}}> S'inscrire </Text>
          </TouchableOpacity>
        </View>
               </>

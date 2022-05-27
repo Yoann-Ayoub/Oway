@@ -94,7 +94,7 @@ export default function Register() {
          <TouchableOpacity  
          style={styles.button}
           onPress={()=>navigation.navigate("MyTravel", {isNewUser:true})} >
-          <Text> S'inscrire </Text>
+          <Text style={{color:"white"}}> S'inscrire </Text>
          </TouchableOpacity>
        </View>
               </>

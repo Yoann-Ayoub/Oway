@@ -27,10 +27,12 @@ export type RootStackParamList = {
   NotFound: undefined;
   LogIn: undefined;
   Register: undefined;
-  MyTravel:{ isNewUser: boolean, values?:any };
+  MyTravel:{ isNewUser: boolean};
   Date:undefined;
-  Houses:undefined;
-  Activities:undefined;
+  Houses:{house:undefined};
+  Activities:{activity:any};
+  ActivitiesForm: undefined;
+  HousesForm:undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<

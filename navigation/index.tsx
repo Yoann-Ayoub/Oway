@@ -22,8 +22,10 @@ import TabTwoScreen from '../screens/TabTwoScreen';
 import Date from '../screens/Date';
 import Houses from '../screens/Houses';
 import Activities from '../screens/Activities';
+import ActivitiesForm from '../screens/ActivitiesForm';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import HousesForm from '../screens/HousesForm';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -53,7 +55,10 @@ function RootNavigator() {
         <Stack.Screen name="MyTravel" component={MyTravel} options={{ headerShown: true, title:"Mes Voyages"}} />
         <Stack.Screen name="Date" component={Date} options={{ headerShown: true, title:"Choix des dates"}} />
         <Stack.Screen name="Houses" component={Houses} options={{ headerShown: true, title:"Choix des dates"}} />
-        <Stack.Screen name="Activities" component={Activities} options={{ headerShown: true, title:"Choix des dates"}} />
+        <Stack.Screen name="Activities" component={Activities} options={{ headerShown: true, title:"Choix des activités"}} />
+        <Stack.Screen name="ActivitiesForm" component={ActivitiesForm} options={{ headerShown: true, title:"Nouvelle Activité"}} />
+        <Stack.Screen name="HousesForm" component={HousesForm} options={{ headerShown: true, title:"Nouvelle Activité"}} />
+
       </Stack.Group>
     </Stack.Navigator>
   );

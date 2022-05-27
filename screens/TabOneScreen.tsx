@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
     backgroundColor:"black"
   },
   text:{
+    color:"white",
     textAlign:"center",
     marginHorizontal:10,
   }
