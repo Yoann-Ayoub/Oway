@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import {FlatList, StyleSheet, TextInput, TouchableOpacity, Image, Button, ScrollView} from 'react-native';
+import {FlatList, StyleSheet, TextInput, TouchableOpacity, Image,  ScrollView} from 'react-native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import { Text, View } from '../components/Themed';
 import { Formik } from 'formik';
@@ -39,7 +39,7 @@ interface OwnProps {
     );
   };
   
-export default function LogIn(isNewUser:boolean,) {
+export default function LogIn(isNewUser:boolean) {
   const navigation =useNavigation<StackNavigationProp<any>>()
     const [newTrip, setNewTrip]= useState(false)
     const [joinTrip, setJoinTrip]= useState(false)
@@ -82,7 +82,7 @@ export default function LogIn(isNewUser:boolean,) {
     }
     
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       {newUser==false ?
       <View style={styles.containerBis}>
         <View style={styles.subView}>
@@ -244,7 +244,7 @@ export default function LogIn(isNewUser:boolean,) {
       </View>
       }
       
-  </ScrollView>
+  </View>
   );
 }
 
