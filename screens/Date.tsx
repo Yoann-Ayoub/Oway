@@ -12,7 +12,7 @@ export default function Date() {
   const navigation =useNavigation<StackNavigationProp<any>>()
   return (
     <View style={styles.container}>
-      {/* <Title text='Choix des dates'></Title> */}
+      <Title text='Choix des dates'></Title>
       <Text style={styles.description}>Sélectionnez vos disponibilités</Text>
       <Calendar/>
     </View>

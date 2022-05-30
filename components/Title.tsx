@@ -4,10 +4,10 @@ import { Text, View } from '../components/Themed';
 
 
 
-export default function Title(text="") {
+export default function Title(props: any) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{text}</Text>
+      <Text style={styles.title}>{props.text}</Text>
     </View>
   );
 }
