@@ -62,11 +62,11 @@ export default function LogIn(isNewUser:boolean) {
     },)
 
     const renderTrip=({item})=>{
-    
+
       return(
         <View style={styles.buttonView}>
-        <TouchableOpacity style={styles.buttonTrip} 
-        onPress={()=>{navigation.navigate(item.icon=="calendar" ? "Date" : item.icon=="tent" ? "Houses" : "Activities")}}>
+        <TouchableOpacity style={styles.buttonTrip}
+        onPress={()=>{navigation.navigate("TravelManager",{ step: item.icon=="calendar" ? "Date" : item.icon=="tent" ? "Houses" : "Activities" })}}>
           <View style={{backgroundColor:"transparent", flex:4,  justifyContent:"center", marginLeft:5, height:30}}>
           <Text style={styles.textButtonTrip}> {item.name}</Text>
           </View>
