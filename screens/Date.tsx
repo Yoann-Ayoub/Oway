@@ -1,7 +1,10 @@
+import React, { useState } from "react";
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet} from 'react-native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import { Text, View } from '../components/Themed';
+import Calendar from "../components/Calendar"
+import Title from "../components/Title";
 
 
 
@@ -9,7 +12,9 @@ export default function Date() {
   const navigation =useNavigation<StackNavigationProp<any>>()
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Dates</Text>
+      {/* <Title text='Choix des dates'></Title> */}
+      <Text style={styles.description}>Sélectionnez vos disponibilités</Text>
+      <Calendar/>
     </View>
   );
 }
@@ -21,9 +26,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
+  description: {
     color:"black",
     fontSize: 20,
-    fontWeight: 'bold',
   },
 });
