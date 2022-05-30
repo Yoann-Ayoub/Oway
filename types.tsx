@@ -33,6 +33,8 @@ export type RootStackParamList = {
   Activities:{activity:any};
   ActivitiesForm: undefined;
   HousesForm:undefined;
+  HouseDetail:{house:undefined};
+  ActivityDetail:{activity:undefined};
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
