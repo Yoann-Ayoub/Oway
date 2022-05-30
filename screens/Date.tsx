@@ -5,6 +5,7 @@ import type { StackNavigationProp } from '@react-navigation/stack';
 import { Text, View } from '../components/Themed';
 import Calendar from "../components/Calendar"
 import Title from "../components/Title";
+import Subtitle from "../components/Subtitle";
 
 
 
@@ -12,8 +13,8 @@ export default function Date() {
   const navigation =useNavigation<StackNavigationProp<any>>()
   return (
     <View style={styles.container}>
-      <Title text='Choix des dates'></Title>
-      <Text style={styles.description}>Sélectionnez vos disponibilités</Text>
+      <Title text='Choix des dates'/>
+      <Subtitle text="Sélectionnez vos disponibilités"/>
       <Calendar/>
     </View>
   );
