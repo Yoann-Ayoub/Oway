@@ -32,6 +32,7 @@ export type RootStackParamList = {
   Date:undefined;
   Houses:undefined;
   Activities:undefined;
+  Date2:undefined;
   ActivitiesForm: undefined;
   HousesForm:undefined;
   HouseDetail:{house:undefined};
