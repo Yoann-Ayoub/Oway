@@ -1577,6 +1577,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     "fastq" "^1.6.0"
 
+"@popperjs/core@^2.0.0", "@popperjs/core@^2.9.2":
+  "integrity" "sha512-9X2obfABZuDVLCgPK9aX0a/x4jaOEweTTWE2+9sr0Qqqevj2Uv5XorvusThmc9XGYpS9yI+fhh8RTafBtGposw=="
+  "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.5.tgz"
+  "version" "2.11.5"
+
 "@react-native-community/cli-debugger-ui@^5.0.1":
   "integrity" "sha512-5gGKaaXYOVE423BUqxIfvfAVSj5Cg1cU/TpGbeg/iqpy2CfqyWqJB3tTuVUbOOiOvR5wbU8tti6pIi1pchJ+oA=="
   "resolved" "https://registry.npmjs.org/@react-native-community/cli-debugger-ui/-/cli-debugger-ui-5.0.1.tgz"
@@ -2664,6 +2669,11 @@
     "isobject" "^3.0.0"
     "static-extend" "^0.1.1"
 
+"classnames@^2.2.6":
+  "integrity" "sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA=="
+  "resolved" "https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz"
+  "version" "2.3.1"
+
 "cli-cursor@^2.1.0":
   "integrity" "sha1-s12sN2R5+sw+lHR9QdDQ9SOP/LU="
   "resolved" "https://registry.npmjs.org/cli-cursor/-/cli-cursor-2.1.0.tgz"
@@ -2988,6 +2998,11 @@
     "abab" "^2.0.3"
     "whatwg-mimetype" "^2.3.0"
     "whatwg-url" "^8.0.0"
+
+"date-fns@^2.24.0":
+  "integrity" "sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw=="
+  "resolved" "https://registry.npmjs.org/date-fns/-/date-fns-2.28.0.tgz"
+  "version" "2.28.0"
 
 "dayjs@^1.8.15":
   "integrity" "sha512-ER7EjqVAMkRRsxNCC5YqJ9d9VQYuWdGt7aiH2qA5R5wt8ZmWaP2dLUSIK6y/kVzLMlmh1Tvu5xUf4M/wdGJ5KA=="
@@ -6217,6 +6232,18 @@
   "resolved" "https://registry.npmjs.org/react-date-object/-/react-date-object-2.1.5.tgz"
   "version" "2.1.5"
 
+"react-datepicker@^4.8.0":
+  "integrity" "sha512-u69zXGHMpxAa4LeYR83vucQoUCJQ6m/WBsSxmUMu/M8ahTSVMMyiyQzauHgZA2NUr9y0FUgOAix71hGYUb6tvg=="
+  "resolved" "https://registry.npmjs.org/react-datepicker/-/react-datepicker-4.8.0.tgz"
+  "version" "4.8.0"
+  dependencies:
+    "@popperjs/core" "^2.9.2"
+    "classnames" "^2.2.6"
+    "date-fns" "^2.24.0"
+    "prop-types" "^15.7.2"
+    "react-onclickoutside" "^6.12.0"
+    "react-popper" "^2.2.5"
+
 "react-devtools-core@^4.6.0":
   "integrity" "sha512-jbX8Yqyq4YvFEobHyXVlGaH0Cs/+EOdb3PL911bxaR5BnzbB5TE4RFHC1iOgT4vRH3VxIIrVQ7lR9vsiFFCYCA=="
   "resolved" "https://registry.npmjs.org/react-devtools-core/-/react-devtools-core-4.24.4.tgz"
@@ -6225,7 +6252,7 @@
     "shell-quote" "^1.6.1"
     "ws" "^7"
 
-"react-dom@>=16.8.0", "react-dom@>=17.0.1", "react-dom@17.0.1":
+"react-dom@^15.5.x || ^16.x || ^17.x", "react-dom@^16.8.0 || ^17 || ^18", "react-dom@^16.9.0 || ^17 || ^18", "react-dom@>=16.8.0", "react-dom@>=17.0.1", "react-dom@17.0.1":
   "integrity" "sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.1.tgz"
   "version" "17.0.1"
@@ -6243,6 +6270,11 @@
   "integrity" "sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw=="
   "resolved" "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-2.0.4.tgz"
   "version" "2.0.4"
+
+"react-fast-compare@^3.0.1":
+  "integrity" "sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA=="
+  "resolved" "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.0.tgz"
+  "version" "3.2.0"
 
 "react-freeze@^1.0.0":
   "integrity" "sha512-yQaiOqDmoKqks56LN9MTgY06O0qQHgV4FUrikH357DydArSZHQhl0BJFqGKIZoTqi8JizF9Dxhuk1FIZD6qCaw=="
@@ -6397,6 +6429,19 @@
     "@react-navigation/core" "^3.7.9"
     "@react-navigation/native" "^3.8.4"
 
+"react-onclickoutside@^6.12.0":
+  "integrity" "sha512-a5Q7CkWznBRUWPmocCvE8b6lEYw1s6+opp/60dCunhO+G6E4tDTO2Sd2jKE+leEnnrLAE2Wj5DlDHNqj5wPv1Q=="
+  "resolved" "https://registry.npmjs.org/react-onclickoutside/-/react-onclickoutside-6.12.1.tgz"
+  "version" "6.12.1"
+
+"react-popper@^2.2.5":
+  "integrity" "sha512-e1hj8lL3uM+sgSR4Lxzn5h1GxBlpa4CQz0XLF8kx4MDrDRWY0Ena4c97PUeSX9i5W3UAfDP0z0FXCTQkoXUl3Q=="
+  "resolved" "https://registry.npmjs.org/react-popper/-/react-popper-2.3.0.tgz"
+  "version" "2.3.0"
+  dependencies:
+    "react-fast-compare" "^3.0.1"
+    "warning" "^4.0.2"
+
 "react-refresh@^0.4.0":
   "integrity" "sha512-Hwln1VNuGl/6bVwnd0Xdn1e84gT/8T9aYNL+HAKDArLCS7LWjwr7StE30IEYbIkx0Vi3vs+coQxe+SQDbGbbpA=="
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.4.3.tgz"
@@ -6430,7 +6475,7 @@
     "react-shallow-renderer" "^16.13.1"
     "scheduler" "^0.20.1"
 
-"react@*", "react@^16.0", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.0", "react@>=16.8.0", "react@>=17.0.1", "react@16 || 17", "react@17.0.1", "react@17.0.2":
+"react@*", "react@^15.5.x || ^16.x || ^17.x", "react@^16.0", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17 || ^18", "react@^17.0.0", "react@>=16.8.0", "react@>=17.0.1", "react@16 || 17", "react@17.0.1", "react@17.0.2":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
   "version" "17.0.1"
@@ -7627,6 +7672,13 @@
   "integrity" "sha512-recZTSvuaH/On5ZU5ywq66y99lImWqzP93+AiUo9LUwG8gXHW+LJjhOd6REJHm7qb0niYqrEQJvbHSQfuJtTqA=="
   "resolved" "https://registry.npmjs.org/warn-once/-/warn-once-0.1.0.tgz"
   "version" "0.1.0"
+
+"warning@^4.0.2":
+  "integrity" "sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w=="
+  "resolved" "https://registry.npmjs.org/warning/-/warning-4.0.3.tgz"
+  "version" "4.0.3"
+  dependencies:
+    "loose-envify" "^1.0.0"
 
 "wcwidth@^1.0.1":
   "integrity" "sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g="

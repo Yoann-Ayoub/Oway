@@ -60,7 +60,6 @@ function RootNavigator() {
         <Stack.Screen name="Date" component={Date} options={{ headerShown: true, title:"Choix des dates"}} />
         <Stack.Screen name="Houses" component={Houses} options={{ headerShown: true, title:"Choix du logement"}} />
         <Stack.Screen name="Date2" component={Date2} options={{ headerShown: true, title:"Choix des dates"}} />
-        <Stack.Screen name="Houses" component={Houses} options={{ headerShown: true, title:"Choix des dates"}} />
         <Stack.Screen name="Activities" component={Activities} options={{ headerShown: true, title:"Choix des activités"}} />
         <Stack.Screen name="ActivitiesForm" component={ActivitiesForm} options={{ headerShown: true, title:"Nouvelle Activité"}} />
         <Stack.Screen name="HousesForm" component={HousesForm} options={{ headerShown: true, title:"Nouveau Logement"}} />
