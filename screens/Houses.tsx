@@ -1,5 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
-import { StyleSheet, Image, TouchableOpacity, FlatList, ScrollView} from 'react-native';
+import { StyleSheet, Image, TouchableOpacity, FlatList, ScrollView, Linking} from 'react-native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import { Text, View } from '../components/Themed';
 import { useEffect, useState } from 'react';
@@ -23,22 +23,25 @@ export default function Houses(house:House) {
 
   const navigation =useNavigation<StackNavigationProp<any>>()
   const [listHouse, setListHouse]=useState<Array<House>>([
-      {title:"Petite maison pas cher", url:"", price:660, typePrice:"total",adress:"", description:"", location:"Barcelone", validationNumber:3,click: 0, dontKnowNumber:1,notValidationNumber:0},
-      {title:"5 chambres", url:"", price:660, typePrice:"total", adress:"", description:"", location:"Barcelone", validationNumber:1,click: 0, dontKnowNumber:0,notValidationNumber:2}, 
-      {title:"Appart bord de place", url:"", price:200, typePrice:"personne",adress:"", description:"", location:"Barcelone", validationNumber:2, click: 0, dontKnowNumber:0,notValidationNumber:0},
-      {title:"Studio en centre ville", url:"", price:100, typePrice:"personne",adress:"", description:"", location:"Barcelone", validationNumber:2,click: 0, dontKnowNumber:1,notValidationNumber:0} ])
+      {title:"Petite maison pas cher", url:"https://www.airbnb.fr", price:660, typePrice:"total",adress:"", description:"", location:"Barcelone", validationNumber:3,click: 0, dontKnowNumber:1,notValidationNumber:0},
+      {title:"5 chambres", url:"https://www.airbnb.fr", price:660, typePrice:"total", adress:"", description:"", location:"Barcelone", validationNumber:1,click: 0, dontKnowNumber:0,notValidationNumber:2}, 
+      {title:"Appart bord de place", url:"https://www.airbnb.fr", price:200, typePrice:"personne",adress:"", description:"", location:"Barcelone", validationNumber:2, click: 0, dontKnowNumber:0,notValidationNumber:0},
+      {title:"Studio en centre ville", url:"https://www.airbnb.fr", price:100, typePrice:"personne",adress:"", description:"", location:"Barcelone", validationNumber:2,click: 0, dontKnowNumber:1,notValidationNumber:0} ])
       const [render, setRender]=useState(false)
 
       useEffect(()=>{
         if (house.route.params!==undefined){
           console.log("youhou",house.route.params.house)
-          const newList= [...listHouse,house.route.params.activity]
+          const newList= [...listHouse,house.route.params.house]
           setListHouse(newList)
         }
         }, [house.route.params])
 
       const renderHouse=({item})=>{
-        return(<TouchableOpacity style={styles.activityButton}>
+        return(<TouchableOpacity style={styles.activityButton}
+        onPress={()=>{
+          console.log(item)
+          navigation.push("HouseDetail", {house:item})}}>
         <View style={styles.activityView}>
         <Text style={{color:"black", fontSize:15}}>{item.title}</Text>
         </View>

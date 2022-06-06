@@ -26,6 +26,8 @@ import ActivitiesForm from '../screens/ActivitiesForm';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import HousesForm from '../screens/HousesForm';
+import HouseDetail from '../screens/HouseDetail';
+import ActivityDetail from '../screens/ActivityDetail';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -58,7 +60,8 @@ function RootNavigator() {
         <Stack.Screen name="Activities" component={Activities} options={{ headerShown: true, title:"Choix des activités"}} />
         <Stack.Screen name="ActivitiesForm" component={ActivitiesForm} options={{ headerShown: true, title:"Nouvelle Activité"}} />
         <Stack.Screen name="HousesForm" component={HousesForm} options={{ headerShown: true, title:"Nouvelle Activité"}} />
-
+        <Stack.Screen name="HouseDetail" component={HouseDetail} options={{ headerShown: true, title:"Détail Logement"}} />
+        <Stack.Screen name="ActivityDetail" component={ActivityDetail} options={{ headerShown: true, title:"Détail Activité"}} />
       </Stack.Group>
     </Stack.Navigator>
   );

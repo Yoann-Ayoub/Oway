@@ -140,7 +140,7 @@ export default function ActivitiesForm(navigation:OwnProps) {
          style={styles.button}
           onPress={()=>{
             const house={title:titre, url:url, price:price,  typePrice:typePrice, adress:adress, description:description, validationNumber:0,click: 0, dontKnowNumber:0,notValidationNumber:0}
-            navigation.navigation.navigate("Houses", {activity:house})}} >
+            navigation.navigation.navigate("Houses", {house:house})}} >
           <Text style={{color:"white"}}> Ajouter ce Logement </Text>
          </TouchableOpacity>
        </View>

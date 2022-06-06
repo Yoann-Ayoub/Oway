@@ -21,9 +21,9 @@ export default function Activities(activity:Activity) {
 
   const navigation =useNavigation<StackNavigationProp<any>>()
   const [listActivities, setListActivities]=useState<Array<Activity>>([
-      {title:"Saut en parachute", url:"", price:160, typePrice:"personne", adress:"", validationNumber:3,click: 0, dontKnowNumber:1,notValidationNumber:0},
+      {title:"Saut en parachute", url:"https://www.cap-adrenaline.com/saut-en-parachute-A42.html?gclid=Cj0KCQjw1tGUBhDXARIsAIJx01mc393P5BjCJ5UF5K4dW008tS7a1ttWxSxw0Gqet0ov19FmJcWqcXAaAo2eEALw_wcB", price:160, typePrice:"personne", adress:"", validationNumber:3,click: 0, dontKnowNumber:1,notValidationNumber:0},
       {title:"Visite musée nationale", url:"", price:10, typePrice:"personne", adress:"", validationNumber:1,click: 0, dontKnowNumber:0,notValidationNumber:2}, 
-      {title:"Randonnées", url:"", price:0,typePrice:"total", adress:"", validationNumber:2, click: 0, dontKnowNumber:0,notValidationNumber:0},
+      {title:"Randonnées", url:"https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiSlbWSn4f4AhU4GgYAHXDrA_AYABADGgJ3cw&ae=2&ohost=www.google.com&cid=CAESa-D2ysF36YTgSYchdJp5vRq4ZA-zrHphzWMrO6WRics7LgZFQB4wK8EjWBtMfBoyU_loyVEbSO3II91kA0t8IVufxP9UQAuSuE31FP8lS5WMta7QlbtDewwVfTCrijKUNIiln5pHtSAl2U3L&sig=AOD64_3yWt70poc6WgNJCOmNSlRwDc_XBQ&q&adurl&ved=2ahUKEwjjz66Sn4f4AhUpgc4BHQvgB8MQ0Qx6BAgDEAE&dct=1", price:0,typePrice:"total", adress:"", validationNumber:2, click: 0, dontKnowNumber:0,notValidationNumber:0},
       {title:"Après-midi Plage", url:"", price:30,typePrice:"total", adress:"", validationNumber:2,click: 0, dontKnowNumber:1,notValidationNumber:0} ])
   const [render, setRender]=useState(false)
 
@@ -38,7 +38,10 @@ if (activity.route.params!==undefined){
 
       const renderActivity=({item})=>{
         return(
-        <TouchableOpacity style={styles.activityButton}>
+        <TouchableOpacity style={styles.activityButton}
+        onPress={()=>{
+          navigation.push("ActivityDetail", {activity:item})
+        }}>
         <View style={styles.activityView}>
         <Text style={{color:"black", fontSize:15}}>{item.title}</Text>
         </View>
