@@ -18,7 +18,7 @@ interface House {
     notValidationNumber:number,
 }
 
-export default function Houses(house:House) {
+export default function Houses(props) {
 
 
   const navigation =useNavigation<StackNavigationProp<any>>()
@@ -30,12 +30,12 @@ export default function Houses(house:House) {
       const [render, setRender]=useState(false)
 
       useEffect(()=>{
-        if (house.route.params!==undefined){
-          console.log("youhou",house.route.params.house)
-          const newList= [...listHouse,house.route.params.house]
+        if (props.house!==undefined){
+          console.log("youhou",props.house)
+          const newList= [...listHouse,props.house]
           setListHouse(newList)
         }
-        }, [house.route.params])
+        }, [props.house])
 
       const renderHouse=({item})=>{
         return(<TouchableOpacity style={styles.activityButton}

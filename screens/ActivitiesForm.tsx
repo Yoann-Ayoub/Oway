@@ -127,7 +127,7 @@ export default function ActivitiesForm(navigation:OwnProps) {
          style={styles.button}
           onPress={()=>{
             const activity={title:titre, url:url, price:price, typePrice:typePrice,adress:adress, validationNumber:0,click: 0, dontKnowNumber:0,notValidationNumber:0}
-            navigation.navigation.navigate("Activities", {activity:activity})}} >
+            navigation.navigation.navigate("TravelManager", {step: "Activities", activity: activity})}} >
           <Text style={{color:"white"}}> Ajouter cette activité </Text>
          </TouchableOpacity>
        </View>

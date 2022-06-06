@@ -17,7 +17,7 @@ export interface Activity {
   notValidationNumber:number,
 }
 
-export default function Activities(activity:Activity) {
+export default function Activities(props) {
 
   const navigation =useNavigation<StackNavigationProp<any>>()
   const [listActivities, setListActivities]=useState<Array<Activity>>([
@@ -28,12 +28,12 @@ export default function Activities(activity:Activity) {
   const [render, setRender]=useState(false)
 
 useEffect(()=>{
-if (activity.route.params!==undefined){
-  console.log("youhou",activity.route.params.activity)
-  const newList= [...listActivities,activity.route.params.activity]
+if (props.activity!==undefined){
+  console.log("youhou",props.activity)
+  const newList= [...listActivities,props.activity]
   setListActivities(newList)
 }
-}, [activity.route.params])
+}, [props.activity])
 
 
       const renderActivity=({item})=>{

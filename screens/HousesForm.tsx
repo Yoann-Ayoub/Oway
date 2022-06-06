@@ -25,7 +25,7 @@ const loginValidationSchema = yup.object().shape({
   interface OwnProps {
     navigation: Navigation
   }
-export default function ActivitiesForm(navigation:OwnProps) {
+export default function HousesForm(navigation:OwnProps) {
   const [titre, setTitre]=useState("")
   const[url, setUrl]=useState("")
   const [adress, setAdress]=useState("")
@@ -47,8 +47,7 @@ export default function ActivitiesForm(navigation:OwnProps) {
         validationSchema={loginValidationSchema}
             initialValues={{ titre: '',url: '', adress: '', price:"" }}
             onSubmit={(values) => {
-            navigation.navigation.navigate("Activities", {activities:values})}}
-          >
+            navigation.navigation.navigate("TravelManager", {step: "Houses", house: values})}} >
             {({ handleChange, handleBlur, errors, values, isValid }) => (
               <>
                <View style={{width:"80%", backgroundColor:"white", marginTop:5}}>
@@ -140,7 +139,7 @@ export default function ActivitiesForm(navigation:OwnProps) {
          style={styles.button}
           onPress={()=>{
             const house={title:titre, url:url, price:price,  typePrice:typePrice, adress:adress, description:description, validationNumber:0,click: 0, dontKnowNumber:0,notValidationNumber:0}
-            navigation.navigation.navigate("Houses", {house:house})}} >
+            navigation.navigation.navigate("TravelManager", {step: "Houses", house: house})}} >
           <Text style={{color:"white"}}> Ajouter ce Logement </Text>
          </TouchableOpacity>
        </View>

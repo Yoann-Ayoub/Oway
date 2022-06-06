@@ -29,7 +29,8 @@ const TabNavigator = (props) => {
                     ),
                   }}
       />
-      <Tab.Screen name="Houses" component={Houses}
+      <Tab.Screen name="Houses"
+      children={()=><Houses house={props.house} />}
       options={{
                           tabBarLabel: 'Logement',
                           tabBarLabelPosition:'below-icon',
@@ -38,7 +39,8 @@ const TabNavigator = (props) => {
                           ),
                         }}
       />
-      <Tab.Screen name="Activities" component={Activities}
+      <Tab.Screen name="Activities"
+      children={()=><Activities activity={props.activity} />}
       options={{
                           tabBarLabel: 'Activités',
                           tabBarLabelPosition:'below-icon',
