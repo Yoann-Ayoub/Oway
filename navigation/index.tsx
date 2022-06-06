@@ -20,6 +20,7 @@ import Register from '../screens/Register';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import Date from '../screens/Date';
+import Date2 from '../screens/Date2';
 import Houses from '../screens/Houses';
 import Activities from '../screens/Activities';
 import ActivitiesForm from '../screens/ActivitiesForm';
@@ -54,6 +55,7 @@ function RootNavigator() {
         <Stack.Screen name="Register" component={Register} options={{ headerShown: true, title:"Inscription"}}/>
         <Stack.Screen name="MyTravel" component={MyTravel} options={{ headerShown: true, title:"Mes Voyages"}} />
         <Stack.Screen name="Date" component={Date} options={{ headerShown: true, title:"Choix des dates"}} />
+        <Stack.Screen name="Date2" component={Date2} options={{ headerShown: true, title:"Choix des dates"}} />
         <Stack.Screen name="Houses" component={Houses} options={{ headerShown: true, title:"Choix des dates"}} />
         <Stack.Screen name="Activities" component={Activities} options={{ headerShown: true, title:"Choix des activités"}} />
         <Stack.Screen name="ActivitiesForm" component={ActivitiesForm} options={{ headerShown: true, title:"Nouvelle Activité"}} />

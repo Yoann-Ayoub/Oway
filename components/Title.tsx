@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'absolute',
-    width: '297px',
+    width: '600px',
     height: '40px',
     left: '16px',
     top: '101px',

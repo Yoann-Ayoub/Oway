@@ -14,7 +14,7 @@ function Validate() {
     <View style={styles.buttonView}>
       <TouchableOpacity  
         style={styles.button}
-        onPress={()=>navigation.navigate("MyTravel", {isNewUser:true})} >
+        onPress={()=>navigation.navigate("Date2")} >
         <Text style={{color:"white"}}>Valider</Text>
       </TouchableOpacity>
     </View>
