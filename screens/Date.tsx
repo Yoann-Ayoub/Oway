@@ -15,6 +15,10 @@ export default function Date() {
     <View style={styles.container}>
       <Title text='Choix des dates'/>
       <Subtitle text="Sélectionnez vos disponibilités"/>
+      <div style={{position: 'absolute', top: '200px'}}>
+        <button style={{width: '112px', height: '32px', backgroundColor: '#1EA21C', borderRadius: 16}}>Disponible</button>
+        <button style={{width: '112px', height: '32px', backgroundColor: '#E9A16D', borderRadius: 16}}>Peut-Être</button>
+      </div>
       <Calendar/>
     </View>
   );
@@ -31,4 +35,12 @@ const styles = StyleSheet.create({
     color:"black",
     fontSize: 20,
   },
+  legend: {
+    position: 'absolute',
+    width: '225px',
+    height: '32px',
+    backgroundColor: '#1EA21C',
+    // left: calc(50% - 225/2 - 2),
+    // top: calc(50% - 32/2 - 123)
+  }
 });
