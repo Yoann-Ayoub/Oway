@@ -28,6 +28,7 @@ export type RootStackParamList = {
   LogIn: undefined;
   Register: undefined;
   MyTravel:{ isNewUser: boolean};
+  TravelManager:undefined;
   Date:undefined;
   Houses:{house:undefined};
   Activities:{activity:any};
