@@ -56,7 +56,7 @@ function RootNavigator() {
         <Stack.Screen name="LogIn" component={LogIn} options={{ headerShown: true, title:"Connexion"}}/>
         <Stack.Screen name="Register" component={Register} options={{ headerShown: true, title:"Inscription"}}/>
         <Stack.Screen name="MyTravel" component={MyTravel} options={{ headerShown: true, title:"Mes Voyages"}} />
-        <Stack.Screen name="TravelManager" component={TravelManager} options={{ headerShown: true, title:"Retour"}} />
+        <Stack.Screen name="TravelManager" component={TravelManager} options={{ headerShown: false, title:"Un voyage"}} />
         <Stack.Screen name="Date" component={Date} options={{ headerShown: true, title:"Choix des dates"}} />
         <Stack.Screen name="Houses" component={Houses} options={{ headerShown: true, title:"Choix du logement"}} />
         <Stack.Screen name="Date2" component={Date2} options={{ headerShown: true, title:"Choix des dates"}} />

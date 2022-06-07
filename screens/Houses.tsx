@@ -3,6 +3,7 @@ import { StyleSheet, Image, TouchableOpacity, FlatList, ScrollView, Linking} fro
 import type { StackNavigationProp } from '@react-navigation/stack';
 import { Text, View } from '../components/Themed';
 import { useEffect, useState } from 'react';
+import ReturnButton from "../components/ReturnButton";
 
 interface House {
     title:string,
@@ -111,6 +112,7 @@ export default function Houses(props) {
 
     return (
     <View style={styles.container}>
+      <ReturnButton/>
       <ScrollView>
         <View style={styles.globalView}>
       <Text style={styles.title}>Votez pour votre logement préféré ou  proposez-en un autre !</Text>
