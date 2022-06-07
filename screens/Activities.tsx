@@ -3,6 +3,7 @@ import { StyleSheet, Image, TouchableOpacity, FlatList, ScrollView} from 'react-
 import type { StackNavigationProp } from '@react-navigation/stack';
 import { Text, View } from '../components/Themed';
 import { useEffect, useState } from 'react';
+import ReturnButton from "../components/ReturnButton";
 
 
 export interface Activity {
@@ -111,6 +112,7 @@ if (props.activity!==undefined){
       }
     return (
     <View style={styles.container}>
+      <ReturnButton />
       <ScrollView>
         <View style={styles.globalView}>
       <Text style={styles.title}>Votez pour vos activités préférés ou  proposez-en un autre !</Text>
